@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <form action="">
+                <h1>LOGIN</h1>
+                <div class="input-log">
+                    <input id="log_email" class="input" type="email" placeholder="Email">
+                    <p id="log_email_error" style="color:red; margin: 0; font-size: small;"></p>
+                    <p id="log_email_verify" style="color:green; margin: 0; font-size: small;"></p>
+                    <input id="log_pass" class="input" type="password" placeholder="Password">
+                    <p id="log_pass_error" style="color:red; margin: 0; font-size: small;"></p>
+                    <p id="log_pass_verify" style="color:green; margin: 0; font-size: small;"></p>
+                </div>
+
+                <button class="btn" type="submit" onclick="validateUser()">LOGIN</button>
+
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
