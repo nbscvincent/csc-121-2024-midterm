@@ -1,0 +1,102 @@
+.log-in-user {
+    display: grid;
+    grid-template-columns: 870px 0px;
+    width: 100%; 
+    min-height: 105vh; 
+    place-items: center; 
+    background-color: black;
+    justify-content: center;
+}
+
+.log-in {
+    display: inline-block;
+    margin-bottom: 30px;
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #056608;
+}
+
+.log-in-title-1 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.log-in-title-2 {
+    font-family: Arial;
+    font-size: large;
+}
+
+.log-in-email-1 {
+    margin-left: 55px;
+    margin-top: 40px;
+}
+
+.log-in-email-2 {
+    height: 30px;
+    padding-left: 5px;
+    font-family: Arial;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+
+.log-in-password-1 {
+    margin-left: 55px;
+    margin-top: 25px;
+}
+
+.log-in-password-2 {
+    height: 30px;
+    padding-left: 5px;
+    font-family: Arial;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+
+.log-in-remember-me-1 {
+    font-family: Arial;
+    font-size: 14px;
+    margin-left: 55px;
+    margin-top: 25px;
+}
+
+.log-in-remember-me-2:not(:checked) {
+    opacity: 50%;
+}
+
+.log-in-remember-me-2 {
+    accent-color: white;
+    cursor: pointer;
+}
+
+.log-in-remember-me-3 {
+    vertical-align: 1px;
+}
+
+.log-in-button-1 {
+    margin-top: 30px;
+}
+
+.log-in-button-2 {
+    height: 50px;
+    width: 200px;
+    background-color: #056608;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Arial;
+}
+
+.log-in-button-2:hover {
+    box-shadow: 0px 0px 20px #046307;
+}
+
+.log-in-button-2:active {
+    opacity: 90%;
+}
