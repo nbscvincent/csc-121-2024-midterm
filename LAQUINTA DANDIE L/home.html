@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Task Manager</h2>
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button id="addTaskButton">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let tasks = [];
+
+            const taskInput = document.getElementById("taskInput");
+            const addTaskButton = document.getElementById("addTaskButton");
+            const taskList = document.getElementById("taskList");
+
+            addTaskButton.addEventListener("click", function() {
+                const taskText = taskInput.value.trim();
+                if (taskText !== "") {
+                    tasks.push(taskText);
+                    renderTasks();
+                    taskInput.value = ""; // Clear input field after adding task
+                }
+            });
+
+            taskList.addEventListener("click", function(event) {
+                if (event.target.classList.contains("delete-button")) {
+                    const index = Array.from(taskList.children).indexOf(event.target.parentElement);
+                    tasks.splice(index, 1);
+                    renderTasks();
+                }
+            });
+
+            function renderTasks() {
+                taskList.innerHTML = "";
+                tasks.forEach((task, index) => {
+                    const li = document.createElement("li");
+                    li.textContent = task;
+                    const deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Delete";
+                    deleteButton.className = "delete-button";
+                    li.appendChild(deleteButton);
+                    taskList.appendChild(li);
+                });
+            }
+        });
+    </script>
+    <script src="login.js"></script>
+</body>
+</html>
